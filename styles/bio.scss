@@ -1,0 +1,7 @@
+@use "./partials/mixins";
+@use "./partials/variables";
+@use "./partials/fonts";
+
+* {
+    font-family: "AvenirNext LT Pro", Verdana, Tahoma, sans-serif;
+}
