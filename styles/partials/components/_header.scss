@@ -1,0 +1,43 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+// Mobile Version
+.header {
+    background-color: $primary-black;
+    width: 100vw;
+    height: 4rem;
+
+    &__container-logo {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5rem 0;
+    }
+
+    &__logo {
+        max-width: 7.5rem;
+        max-height: 1.25rem;
+    }
+}
+
+.primary-nav {
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        color: $secondary-mercury;
+
+        &-item {
+            width: 100vw;
+
+            &:hover {
+                border-bottom: white 5px solid;
+            }
+        }
+    }
+}
+// Tablet Version
+

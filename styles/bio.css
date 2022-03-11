@@ -1,24 +1,64 @@
 @font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../assets/Font/AvenirNextLTPro-Demi.woff2"), url("../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
+  font-family: "AvenirDemi";
+  src: url("../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
+  font-family: "AvenirBold";
+  src: url("../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
+  font-family: "AvenirRegular";
+  src: url("../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+.header {
+  background-color: #323232;
+  width: 100vw;
+  height: 4rem;
+}
+.header__container-logo {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+.header__logo {
+  max-width: 7.5rem;
+  max-height: 1.25rem;
+}
+
+.primary-nav__list {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  color: #e1e1e1;
+}
+.primary-nav__list-item {
+  width: 100vw;
+}
+.primary-nav__list-item:hover {
+  border-bottom: white 5px solid;
+}
+
 * {
-  font-family: "AvenirNext LT Pro", Verdana, Tahoma, sans-serif;
+  font-family: "AvenirRegular", "AvenirDemi", "AvenirBold", Verdana, Tahoma, sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }/*# sourceMappingURL=bio.css.map */

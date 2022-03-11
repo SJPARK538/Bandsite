@@ -1,5 +1,5 @@
 @mixin mobile {
-    @media screen and (min-width: 320px) {
+    @media screen and (max-width: 767px) {
         @content;
     }
 }
@@ -11,13 +11,8 @@
 }
 
 @mixin laptop {
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
         @content;            
     }
 }
 
-@mixin desktop {
-    @media screen and (min-width: 1440px) {
-        @content;            
-    }
-}

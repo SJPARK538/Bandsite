@@ -1,7 +1,20 @@
 @use "./partials/mixins";
 @use "./partials/variables";
 @use "./partials/fonts";
+@use "./partials/components/header";
+@use "./partials/components/hero";
+@use "./partials/components/main";
+@use "./partials/components/photogallery";
+@use "./partials/components/footer";
 
 * {
-    font-family: "AvenirNext LT Pro", Verdana, Tahoma, sans-serif;
+    font-family: "AvenirRegular", "AvenirDemi", "AvenirBold", Verdana, Tahoma, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box  ;
 }
