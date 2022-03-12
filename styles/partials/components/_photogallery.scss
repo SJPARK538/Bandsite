@@ -1,0 +1,30 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "../fonts" as *;
+
+.photo {
+    margin: 0 1rem;
+    background-color: $secondary-alabaster;
+
+    &__title {
+        color: $primary-black;
+        font-family: "AvenirDemi";
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    &__conatiner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__image {
+        height: 50vw;
+        width: 100%;
+
+        &:hover {
+            filter: grayscale(0%);
+            box-shadow: 5px 5px 15px;
+        }
+    }
+}

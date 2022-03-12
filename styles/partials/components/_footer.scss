@@ -1,0 +1,103 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "../fonts" as *;
+
+.footer {
+    background-color: $primary-black;
+    
+    &__container {
+        margin: 0 1rem;
+    }
+    &__header {
+        position: relative;
+    
+        &-title {
+            color: $primary-white;
+            font-family: "AvenirDemi";
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+
+        &-logo {
+            max-width: 7.5rem;
+            max-height: 1.25rem;
+            position: absolute;
+            top: 34rem;
+        }
+    }
+
+    &__social-container {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        padding-bottom: 1rem;
+    }
+
+    &__contact-info-container {
+        display:flex;
+        flex-direction: column;
+        color: $primary-white;
+    }
+
+    &__contact-name {
+        font-family: "AvenirDemi";
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        margin: 0;
+    }
+
+    &__contact-group {
+        font-family: "AvenirDemi";
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        padding: 0 0 1rem 0;
+        margin: 0;
+    }
+
+    &__contact-address {
+        font-family: "AvenirRegular";
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        margin: 0;
+    }
+
+    &__contact-country {
+        font-family: "AvenirRegular";
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        margin:0;
+        padding: 0 0 1rem 0;
+    }
+
+    &__contact-email {
+        margin: 0;
+        padding: 0 0 1rem 0;
+
+        &-link {
+            text-decoration: none;
+            font-family: "AvenirRegular";
+            font-size: 0.8125rem;
+            line-height: 1.125rem;
+            color: $primary-white;
+            margin: 0;
+            padding: 0 0 1.5rem 0;
+        
+
+            &:hover {
+                color: $primary-silver;
+            }
+        }
+    }
+
+    &__copyright {
+        color: $primary-white;
+        font-size: 0.8125rem;
+        line-height: 1.5rem;
+        margin: 3rem 0 0 0;
+        padding: 1.2rem 0;
+
+    }
+
+    
+}
+

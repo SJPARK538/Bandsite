@@ -1,23 +1,14 @@
 @font-face {
   font-family: "AvenirDemi";
   src: url("../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "AvenirBold";
   src: url("../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "AvenirRegular";
   src: url("../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 .header {
   background-color: #323232;
@@ -43,12 +34,175 @@
   margin: 0;
   width: 100vw;
   color: #e1e1e1;
+  font-family: "AvenirDemi";
 }
 .primary-nav__list-item {
   width: 100vw;
 }
 .primary-nav__list-item:hover {
-  border-bottom: white 5px solid;
+  border-bottom: white 4px solid;
+}
+
+.hero {
+  margin: 0;
+  padding: 0;
+  background-image: url(../../../assets/Images/hero-bio.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 30vh;
+}
+.hero__container {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 30vh;
+  background-color: rgba(50, 50, 50, 0.5);
+}
+.hero__title {
+  font-family: "AvenirDemi";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #ffffff;
+  padding: 0 1rem;
+}
+
+.main {
+  background-color: #ffffff;
+  color: #323232;
+  margin: 0 1rem;
+}
+.main__title {
+  font-family: "AvenirBold";
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.main__container-image {
+  height: 50vw;
+  width: 100%;
+}
+.main__image {
+  width: 100%;
+  height: 100%;
+}
+.main__interview, .main__musicians {
+  font-family: "AvenirDemi";
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+.main__band {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+.main__band-text {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+
+.photo {
+  margin: 0 1rem;
+  background-color: #fafafa;
+}
+.photo__title {
+  color: #323232;
+  font-family: "AvenirDemi";
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.photo__conatiner {
+  display: flex;
+  flex-direction: column;
+}
+.photo__image {
+  height: 50vw;
+  width: 100%;
+}
+.photo__image:hover {
+  filter: grayscale(0%);
+  box-shadow: 5px 5px 15px;
+}
+
+.footer {
+  background-color: #323232;
+}
+.footer__container {
+  margin: 0 1rem;
+}
+.footer__header {
+  position: relative;
+}
+.footer__header-title {
+  color: #ffffff;
+  font-family: "AvenirDemi";
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.footer__header-logo {
+  max-width: 7.5rem;
+  max-height: 1.25rem;
+  position: absolute;
+  top: 34rem;
+}
+.footer__social-container {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  padding-bottom: 1rem;
+}
+.footer__contact-info-container {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+.footer__contact-name {
+  font-family: "AvenirDemi";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  margin: 0;
+}
+.footer__contact-group {
+  font-family: "AvenirDemi";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  padding: 0 0 1rem 0;
+  margin: 0;
+}
+.footer__contact-address {
+  font-family: "AvenirRegular";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  margin: 0;
+}
+.footer__contact-country {
+  font-family: "AvenirRegular";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  margin: 0;
+  padding: 0 0 1rem 0;
+}
+.footer__contact-email {
+  margin: 0;
+  padding: 0 0 1rem 0;
+}
+.footer__contact-email-link {
+  text-decoration: none;
+  font-family: "AvenirRegular";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  color: #ffffff;
+  margin: 0;
+  padding: 0 0 1.5rem 0;
+}
+.footer__contact-email-link:hover {
+  color: #AFAFAF;
+}
+.footer__copyright {
+  color: #ffffff;
+  font-size: 0.8125rem;
+  line-height: 1.5rem;
+  margin: 3rem 0 0 0;
+  padding: 1.2rem 0;
 }
 
 * {

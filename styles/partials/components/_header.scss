@@ -1,5 +1,6 @@
 @use "../variables" as *;
 @use "../mixins" as *;
+@use "../fonts" as *;
 
 // Mobile Version
 .header {
@@ -29,12 +30,13 @@
         margin: 0;
         width: 100vw;
         color: $secondary-mercury;
+        font-family: "AvenirDemi";
 
         &-item {
             width: 100vw;
 
             &:hover {
-                border-bottom: white 5px solid;
+                border-bottom: white 4px solid;
             }
         }
     }
