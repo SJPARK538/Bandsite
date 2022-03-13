@@ -1,6 +1,7 @@
 @use "../variables" as *;
-@use "../mixins" as *;
+@use "../breakpoints" as *;
 @use "../fonts" as *;
+@use "./mixins"as *;
 
 .photo {
     margin: 0 1rem;
@@ -8,9 +9,7 @@
 
     &__title {
         color: $primary-black;
-        font-family: "AvenirDemi";
-        font-size: 1.5rem;
-        line-height: 2rem;
+        @include header-mobile;
     }
 
     &__conatiner {

@@ -1,6 +1,7 @@
 @use "../variables" as *;
-@use "../mixins" as *;
+@use "../breakpoints" as *;
 @use "../fonts" as *;
+@use "./mixins"as *;
 
 .main {
     background-color: $primary-white;
@@ -8,9 +9,7 @@
     margin: 0 1rem;
 
     &__title {
-        font-family: "AvenirBold";
-        font-size: 1.5rem;
-        line-height: 2rem;
+        @include header-mobile;
     }
 
     &__container-image {
@@ -24,19 +23,15 @@
     }
 
     &__interview, &__musicians {
-        font-family: "AvenirDemi";
-        font-size: 0.875rem;
-        line-height: 1.375rem;
+        @include subheader-mobile
     }
 
     &__band {
-        font-size: 0.875rem;
-        line-height: 1.375rem;
+        @include subheader-mobile;
     }
 
     &__band-text {
-        font-size: 0.8125rem;
-        line-height: 1.125rem ; 
+        @include bodycopy-mobile;
     }
 
 

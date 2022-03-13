@@ -1,6 +1,7 @@
 @use "../variables" as *;
-@use "../mixins" as *;
+@use "../breakpoints" as *;
 @use "../fonts" as *;
+@use "./mixins" as *;
 
 .footer {
     background-color: $primary-black;
@@ -40,31 +41,23 @@
     }
 
     &__contact-name {
-        font-family: "AvenirDemi";
-        font-size: 0.8125rem;
-        line-height: 1.125rem;
+        @include footercopy-mobile;
         margin: 0;
     }
 
     &__contact-group {
-        font-family: "AvenirDemi";
-        font-size: 0.8125rem;
-        line-height: 1.125rem;
+        @include footercopy-mobile;
         padding: 0 0 1rem 0;
         margin: 0;
     }
 
     &__contact-address {
-        font-family: "AvenirRegular";
-        font-size: 0.8125rem;
-        line-height: 1.125rem;
+        @include footercopy-mobile;
         margin: 0;
     }
 
     &__contact-country {
-        font-family: "AvenirRegular";
-        font-size: 0.8125rem;
-        line-height: 1.125rem;
+        @include footercopy-mobile;
         margin:0;
         padding: 0 0 1rem 0;
     }
@@ -75,9 +68,7 @@
 
         &-link {
             text-decoration: none;
-            font-family: "AvenirRegular";
-            font-size: 0.8125rem;
-            line-height: 1.125rem;
+            @include footercopy-mobile;
             color: $primary-white;
             margin: 0;
             padding: 0 0 1.5rem 0;
@@ -91,8 +82,7 @@
 
     &__copyright {
         color: $primary-white;
-        font-size: 0.8125rem;
-        line-height: 1.5rem;
+        @include footercopy-mobile;
         margin: 3rem 0 0 0;
         padding: 1.2rem 0;
 

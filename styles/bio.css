@@ -1,14 +1,17 @@
 @font-face {
   font-family: "AvenirDemi";
   src: url("../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
 }
 @font-face {
   font-family: "AvenirBold";
   src: url("../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: 700;
 }
 @font-face {
   font-family: "AvenirRegular";
   src: url("../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
 }
 .header {
   background-color: #323232;
@@ -35,6 +38,7 @@
   width: 100vw;
   color: #e1e1e1;
   font-family: "AvenirDemi";
+  font-size: 1rem;
 }
 .primary-nav__list-item {
   width: 100vw;
@@ -43,6 +47,46 @@
   border-bottom: white 4px solid;
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    background-color: #323232;
+    width: 100vw;
+    height: 4rem;
+  }
+  .header__medium {
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    height: 100%;
+    margin: 0 2.25rem;
+  }
+  .header__container-logo {
+    margin: 0;
+  }
+  .header__logo {
+    max-width: 7.5rem;
+    max-height: 1.25rem;
+  }
+  .header .primary-nav__list {
+    margin: 0 2rem;
+    display: flex;
+    justify-content: space-around;
+    width: 30vw;
+    height: 4rem;
+    font-family: "AvenirDemi";
+    color: #e1e1e1;
+  }
+  .header .primary-nav__list-item {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+  }
+  .header .primary-nav__list-item:hover {
+    border-bottom: white 4px solid;
+    color: #ffffff;
+  }
+}
 .hero {
   margin: 0;
   padding: 0;
@@ -74,7 +118,7 @@
   margin: 0 1rem;
 }
 .main__title {
-  font-family: "AvenirBold";
+  font-family: "AvenirDemi";
   font-size: 1.5rem;
   line-height: 2rem;
 }
@@ -92,10 +136,12 @@
   line-height: 1.375rem;
 }
 .main__band {
+  font-family: "AvenirDemi";
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
 .main__band-text {
+  font-family: "AvenirRegular";
   font-size: 0.8125rem;
   line-height: 1.125rem;
 }
@@ -156,13 +202,13 @@
   color: #ffffff;
 }
 .footer__contact-name {
-  font-family: "AvenirDemi";
+  font-family: "AvenirRegular";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   margin: 0;
 }
 .footer__contact-group {
-  font-family: "AvenirDemi";
+  font-family: "AvenirRegular";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   padding: 0 0 1rem 0;
@@ -199,8 +245,9 @@
 }
 .footer__copyright {
   color: #ffffff;
+  font-family: "AvenirRegular";
   font-size: 0.8125rem;
-  line-height: 1.5rem;
+  line-height: 1.125rem;
   margin: 3rem 0 0 0;
   padding: 1.2rem 0;
 }

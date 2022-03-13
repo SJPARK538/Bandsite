@@ -1,6 +1,7 @@
 @use "../variables" as *;
-@use "../mixins" as *;
+@use "../breakpoints" as *;
 @use "../fonts" as *;
+@use "./mixins" as *;
 
 // Mobile Version
 .header {
@@ -31,6 +32,7 @@
         width: 100vw;
         color: $secondary-mercury;
         font-family: "AvenirDemi";
+        font-size: 1rem;
 
         &-item {
             width: 100vw;
@@ -42,4 +44,55 @@
     }
 }
 // Tablet Version
+@include tablet {
+.header {
+    background-color: $primary-black;
+    width: 100vw;
+    height: 4rem;
+
+    &__medium {
+        display: flex;
+        align-items: center;
+        width: 50vw;
+        height: 100%;
+        margin: 0 2.25rem;
+    }
+    &__container-logo {
+        margin: 0;
+    
+    }
+
+    &__logo {
+        max-width: 7.5rem;
+        max-height: 1.25rem;
+    }
+
+    .primary-nav {
+        &__list {
+            margin: 0 2rem;
+            display: flex;
+            justify-content: space-around;
+            width: 30vw;
+            height: 4rem;
+            font-family: "AvenirDemi";
+            color: $secondary-mercury;
+    
+            &-item {
+                display: flex;
+                align-items: center;
+                width: auto;
+                height: auto;
+    
+                &:hover {
+                    border-bottom: white 4px solid;
+                    color: $primary-white;
+                }
+            }
+        }
+    
+    }
+    }
+}
+
+
 

@@ -1,4 +1,4 @@
-@use "./partials/mixins";
+@use "./partials/components/mixins";
 @use "./partials/variables";
 @use "./partials/fonts";
 @use "./partials/components/header";
@@ -6,6 +6,7 @@
 @use "./partials/components/main";
 @use "./partials/components/photogallery";
 @use "./partials/components/footer";
+@use "./partials/breakpoints";
 
 * {
     font-family: "AvenirRegular", "AvenirDemi", "AvenirBold", Verdana, Tahoma, sans-serif;
