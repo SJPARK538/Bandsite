@@ -4,26 +4,55 @@
 @use "./mixins"as *;
 
 .photo {
-    margin: 0 1rem;
     background-color: $secondary-alabaster;
 
     &__title {
+        margin: 0 1rem;
         color: $primary-black;
         @include header-mobile;
     }
 
     &__conatiner {
+        margin: 0 1rem;
         display: flex;
         flex-direction: column;
     }
 
     &__image {
+        margin: 0 1rem;
         height: 50vw;
         width: 100%;
 
         &:hover {
             filter: grayscale(0%);
             box-shadow: 5px 5px 15px;
+        }
+    }
+}
+
+@include tablet {
+    .photo {
+        &__title {
+            margin: 0 2.25rem;
+            padding: 3rem 0 0 0;
+            @include sectionheader-tablet;
+        }
+        &__container {
+            margin: 2.25rem 2.25rem 0 2.25rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__image {
+            height: 18vw;
+            width: 28vw;
+            margin: 0 1.5rem 1.5rem 0;
+            
+            &--three, &--six, &--nine {
+                margin-right: 0;
+            }
         }
     }
 }

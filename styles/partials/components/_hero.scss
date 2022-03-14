@@ -24,9 +24,25 @@
     &__title {
         @include header-mobile;
         color: $primary-white;
-        padding: 0 1rem;
+        padding: 0;
     
     }
+}
 
+// Tablet Version
+
+@include tablet {
+    .hero {
+        height: 30rem;
+
+        &__container {
+            height: 30rem;
+            }
+        
+            &__title {
+                @include pageheader-tablet;           
+                margin: 0 2.25rem;
+            }
+    }
 }
 

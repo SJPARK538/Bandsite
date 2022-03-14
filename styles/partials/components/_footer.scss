@@ -14,9 +14,7 @@
     
         &-title {
             color: $primary-white;
-            font-family: "AvenirDemi";
-            font-size: 1.5rem;
-            line-height: 2rem;
+            @include header-mobile;
         }
 
         &-logo {
@@ -86,8 +84,102 @@
         margin: 3rem 0 0 0;
         padding: 1.2rem 0;
 
-    }
+    }    
+}
 
+@include tablet {
+    .footer {
+        padding-top: 2.25rem;
+        
+        &__container {
+            margin: 0 2.25rem;
+        }
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            width: 50vw;
+            align-content: center;
+
+        
+            &-title {
+                color: $primary-white;
+                @include sectionheader-tablet;
+                margin: 0;
+            }
     
+            &-logo {
+                max-width: 7.5rem;
+                max-height: 1.25rem;
+            }
+        }
+    
+        &__social-container {
+            display: flex;
+            align-items: center;
+            width: 20vw;
+            padding: 0;
+        }
+
+        &__people {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        &__contact-info-container {
+            width: 33.6vh;
+            margin: 2.25rem 2.25rem 0 0;
+
+            &:nth-child(3) {
+                margin-right: 0;
+            }
+        }
+    
+        &__contact-name {
+            @include footercopy-tablet;
+            margin: 0;
+        }
+    
+        &__contact-group {
+            @include footercopy-tablet;
+            padding: 0 0 2.25rem 0;
+            margin: 0;
+        }
+    
+        &__contact-address {
+            @include footercopy-tablet;
+            margin: 0;
+        }
+    
+        &__contact-country {
+            @include footercopy-tablet;
+            margin:0;
+            padding: 0 0 2.25rem 0;
+        }
+    
+        &__contact-email {
+            margin: 0;
+            padding: 0;
+    
+            &-link {
+                text-decoration: none;
+                @include footercopy-tablet;
+                color: $primary-white;
+                margin: 0;
+                padding: 0;
+            
+    
+                &:hover {
+                    color: $primary-silver;
+                }
+            }
+        }
+    
+        &__copyright {
+            color: $primary-white;
+            @include footercopy-tablet;
+            margin: 3rem 0 0 0;
+            padding: 0 0 3rem 0;
+        }    
+    }
 }
 
