@@ -2,6 +2,8 @@
 @use "../breakpoints" as *;
 @use "../fonts" as *;
 @use "./mixins" as *;
+
+// Mobile Version
 .main {
     background-color: $primary-white;
     color: $primary-black;
@@ -34,6 +36,7 @@
     }
 }
 
+// Tablet Version
 @include tablet {
     .main {
         margin: 0;
@@ -81,6 +84,45 @@
         &__band-text:nth-child(2) {
             @include bodycopy-tablet;
             margin: 2.25rem 5.75rem 2.25rem 0;
+        }
+    }
+}
+
+@include desktop {
+    .main {
+        &__title {
+            margin: 3rem 2.25rem 2.25rem 8rem;
+        }
+
+        &__container-image {
+            height: 40vw; 
+        }
+        &__image {
+            width: 65vw;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        &__interview {
+            margin: 2.25rem 14rem 0 14rem;
+        }
+
+        &__musicians {
+            font-size: 1rem;
+            margin: 2.25rem 14rem 0 14rem;
+        }
+
+        &__band {
+            margin: 2.25rem 14rem 0 14rem;
+        }
+
+        &__band-text:nth-child(1) {
+            margin: 2.25rem 2.25rem 2.25rem 14rem;
+        }
+
+        &__band-text:nth-child(2) {
+            @include bodycopy-tablet;
+            margin: 2.25rem 14rem 2.25rem 0;
         }
     }
 }

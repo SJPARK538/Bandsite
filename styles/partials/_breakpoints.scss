@@ -10,8 +10,8 @@
     }
 }
 
-@mixin laptop {
-    @media screen and (min-width: 1440px) {
+@mixin desktop {
+    @media screen and (min-width: 1280px) {
         @content;            
     }
 }

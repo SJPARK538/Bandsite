@@ -46,3 +46,17 @@
     }
 }
 
+// Desktop Version
+@include desktop {
+    .hero {
+        height: 36rem;
+
+        &__container {
+            height: 36rem;
+            }
+        
+            &__title {
+                margin: 0 8rem;
+            }
+    }
+}

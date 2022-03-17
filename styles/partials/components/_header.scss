@@ -46,10 +46,6 @@
 // Tablet Version
 @include tablet {
 .header {
-    background-color: $primary-black;
-    width: 100vw;
-    height: 4rem;
-
     &__medium {
         display: flex;
         align-items: center;
@@ -77,18 +73,26 @@
                 align-items: center;
                 width: auto;
                 height: auto;
-    
-                &:hover {
-                    border-bottom: white 4px solid;
-                    color: $primary-white;
-                }
             }
         }
-    
     }
     }
 }
+@include desktop {
+    .header {
+        &__medium {
+            margin: 0 3.9375rem 0 8rem;
+        }
+        .primary-nav {
+            &__list {
+                margin: 0 3.9375rem;
+                width: 15vw;
+                
+            }
+        }
+        }
 
+}
 
 
 

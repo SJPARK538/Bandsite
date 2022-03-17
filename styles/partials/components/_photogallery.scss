@@ -56,3 +56,26 @@
         }
     }
 }
+
+@include desktop {
+    .photo {
+        &__title {
+            margin: 0 8rem;
+            padding: 3rem 0 0 0;
+        }
+        &__container {
+            margin: 2.25rem 8rem 0 8rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__image {
+            height: 15vw;
+            width: 24.79vw;
+            margin: 0 1.5rem 1.5rem 0;
+            
+        }
+    }
+}

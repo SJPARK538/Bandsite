@@ -2,7 +2,7 @@
 @use "../breakpoints" as *;
 @use "../fonts" as *;
 @use "./mixins" as *;
-
+// Mobile Version 
 .footer {
     background-color: $primary-black;
     
@@ -168,14 +168,8 @@
             &-link {
                 text-decoration: none;
                 @include footercopy-tablet;
-                color: $primary-white;
                 margin: 0;
                 padding: 0;
-            
-    
-                &:hover {
-                    color: $primary-silver;
-                }
             }
         }
     
@@ -185,6 +179,37 @@
             margin: 3rem 0 0 0;
             padding: 0 0 2.25rem 0;
         }    
+    }
+}
+// Desktop Version
+@include desktop {
+    .footer {
+        padding-top: 2.25rem;
+        
+        &__container {
+            margin: 0 8rem;
+        }
+        &__header {
+            width: 35vw;
+        
+            &-logo {
+                max-width: 7.5rem;
+                max-height: 1.25rem;
+                margin-left: 54rem;
+                margin-top: -33rem;
+            }
+        }
+    
+        &__social-container {  
+            width: 12vw;
+
+        }
+    
+        &__contact-info-container {
+            width: 24vh;
+            margin: 2.25rem 2.25rem 0 0;
+
+        }
     }
 }
 
