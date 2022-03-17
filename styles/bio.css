@@ -177,23 +177,22 @@
   }
   .main__interview {
     font-family: "AvenirDemi";
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 2rem;
-    font-size: 1.5rem;
-    margin: 2.25rem 5.75rem 1rem 5.75rem;
+    margin: 2.25rem 5.75rem 0 5.75rem;
   }
   .main__musicians {
     font-family: "AvenirDemi";
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 2rem;
     font-size: 1rem;
-    margin: 0rem 4.5rem;
+    margin: 2.25rem 5.75rem 0 5.75rem;
   }
   .main__band {
     font-family: "AvenirDemi";
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 2rem;
-    margin: 2rem 3.3rem;
+    margin: 2.25rem 5.75rem 0 5.75rem;
   }
   .main__band-description {
     display: flex;
@@ -202,13 +201,13 @@
     font-family: "AvenirRegular";
     font-size: 0.875rem;
     line-height: 1.375rem;
-    margin: 0 0 0 3.3rem;
+    margin: 2.25rem 2.25rem 2.25rem 5.75rem;
   }
   .main__band-text:nth-child(2) {
     font-family: "AvenirRegular";
     font-size: 0.875rem;
     line-height: 1.375rem;
-    margin: 0 3.3rem 0 3.3rem;
+    margin: 2.25rem 5.75rem 2.25rem 0;
   }
 }
 .photo {
@@ -362,15 +361,18 @@
     font-size: 2.25rem;
     line-height: 2.75rem;
     margin: 0;
+    position: relative;
   }
   .footer__header-logo {
     max-width: 7.5rem;
     max-height: 1.25rem;
+    margin-left: 35rem;
+    margin-top: -33rem;
   }
   .footer__social-container {
     display: flex;
     align-items: center;
-    width: 20vw;
+    width: 17vw;
     padding: 0;
   }
   .footer__people {
@@ -378,7 +380,7 @@
     flex-wrap: wrap;
   }
   .footer__contact-info-container {
-    width: 33.6vh;
+    width: 29vh;
     margin: 2.25rem 2.25rem 0 0;
   }
   .footer__contact-info-container:nth-child(3) {
@@ -432,7 +434,7 @@
     font-size: 0.875rem;
     line-height: 1.25rem;
     margin: 3rem 0 0 0;
-    padding: 0 0 3rem 0;
+    padding: 0 0 2.25rem 0;
   }
 }
 * {

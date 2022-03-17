@@ -86,7 +86,7 @@
 
     }    
 }
-
+// Tablet Version
 @include tablet {
     .footer {
         padding-top: 2.25rem;
@@ -105,18 +105,22 @@
                 color: $primary-white;
                 @include sectionheader-tablet;
                 margin: 0;
+                position: relative;
             }
+
     
             &-logo {
                 max-width: 7.5rem;
                 max-height: 1.25rem;
+                margin-left: 35rem;
+                margin-top: -33rem;
             }
         }
     
         &__social-container {
             display: flex;
             align-items: center;
-            width: 20vw;
+            width: 17vw;
             padding: 0;
         }
 
@@ -126,8 +130,9 @@
         }
     
         &__contact-info-container {
-            width: 33.6vh;
+            width: 29vh;
             margin: 2.25rem 2.25rem 0 0;
+            
 
             &:nth-child(3) {
                 margin-right: 0;
@@ -178,7 +183,7 @@
             color: $primary-white;
             @include footercopy-tablet;
             margin: 3rem 0 0 0;
-            padding: 0 0 3rem 0;
+            padding: 0 0 2.25rem 0;
         }    
     }
 }
