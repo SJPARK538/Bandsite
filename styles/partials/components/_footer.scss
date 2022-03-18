@@ -2,6 +2,7 @@
 @use "../breakpoints" as *;
 @use "../fonts" as *;
 @use "./mixins" as *;
+
 // Mobile Version 
 .footer {
     background-color: $primary-black;
@@ -81,8 +82,9 @@
     &__copyright {
         color: $primary-white;
         @include footercopy-mobile;
-        margin: 3rem 0 0 0;
+        margin: 3rem 1rem 0 1rem;
         padding: 1.2rem 0;
+        font-size: 0.65rem;
 
     }    
 }
@@ -96,24 +98,18 @@
         }
         &__header {
             display: flex;
-            justify-content: space-between;
-            width: 50vw;
-            align-content: center;
-
-        
+            gap: 2.25rem;
+            width: 90vw;
+            align-items: center;
+            
             &-title {
-                color: $primary-white;
                 @include sectionheader-tablet;
                 margin: 0;
-                position: relative;
             }
 
-    
             &-logo {
-                max-width: 7.5rem;
-                max-height: 1.25rem;
-                margin-left: 35rem;
-                margin-top: -33rem;
+                position: static;
+                margin-left: 20vw;
             }
         }
     
@@ -130,7 +126,7 @@
         }
     
         &__contact-info-container {
-            width: 29vh;
+            width: 27vw;
             margin: 2.25rem 2.25rem 0 0;
             
 
@@ -174,9 +170,8 @@
         }
     
         &__copyright {
-            color: $primary-white;
             @include footercopy-tablet;
-            margin: 3rem 0 0 0;
+            margin: 3rem 2.25rem 0 2.25rem;
             padding: 0 0 2.25rem 0;
         }    
     }
@@ -190,13 +185,10 @@
             margin: 0 8rem;
         }
         &__header {
-            width: 35vw;
+            width: 80vw;
         
             &-logo {
-                max-width: 7.5rem;
-                max-height: 1.25rem;
-                margin-left: 54rem;
-                margin-top: -33rem;
+                margin-left: 35vw;
             }
         }
     
@@ -208,8 +200,12 @@
         &__contact-info-container {
             width: 24vh;
             margin: 2.25rem 2.25rem 0 0;
-
         }
+
+        &__copyright {
+            margin: 3rem 8rem 0 8rem;
+            padding: 0 0 2.25rem 0;
+        }    
     }
 }
 
