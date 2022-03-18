@@ -99,12 +99,11 @@
         }
         &__image {
             width: 65vw;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
+            margin: 0 auto;
         }
         &__interview {
-            margin: 2.25rem 14rem 0 14rem;
+            margin: 2.25rem 0 0 14rem;
+            width: 48%;
         }
 
         &__musicians {
