@@ -410,6 +410,7 @@
 @media screen and (min-width: 768px) {
   .footer {
     padding-top: 2.25rem;
+    position: relative;
   }
   .footer__container {
     margin: 0 2.25rem;
@@ -419,6 +420,7 @@
     gap: 2.25rem;
     width: 90vw;
     align-items: center;
+    position: static;
   }
   .footer__header-title {
     font-family: "Avenir";
@@ -427,8 +429,9 @@
     margin: 0;
   }
   .footer__header-logo {
-    position: static;
-    margin-left: 20vw;
+    position: absolute;
+    top: 10%;
+    right: 10%;
   }
   .footer__social-container {
     display: flex;
@@ -502,9 +505,6 @@
   }
   .footer__header {
     width: 80vw;
-  }
-  .footer__header-logo {
-    margin-left: 35vw;
   }
   .footer__social-container {
     width: 12vw;

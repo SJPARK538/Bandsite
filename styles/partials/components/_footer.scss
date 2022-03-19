@@ -92,6 +92,7 @@
 @include tablet {
     .footer {
         padding-top: 2.25rem;
+        position: relative;
         
         &__container {
             margin: 0 2.25rem;
@@ -101,6 +102,7 @@
             gap: 2.25rem;
             width: 90vw;
             align-items: center;
+            position: static;
             
             &-title {
                 @include sectionheader-tablet;
@@ -108,8 +110,9 @@
             }
 
             &-logo {
-                position: static;
-                margin-left: 20vw;
+                position: absolute;
+                top: 10%;
+                right: 10%;
             }
         }
     
@@ -186,10 +189,6 @@
         }
         &__header {
             width: 80vw;
-        
-            &-logo {
-                margin-left: 35vw;
-            }
         }
     
         &__social-container {  
