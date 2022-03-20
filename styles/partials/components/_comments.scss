@@ -1,0 +1,49 @@
+@use "../variables" as *;
+@use "../breakpoints" as *;
+@use "../fonts" as *;
+@use "./mixins" as *;
+
+// Mobile Version;
+.comment {
+    margin: 0 1rem;
+    background-color: $primary-white;
+
+    &__title {
+        @include header-mobile;
+        margin: 2rem 0;
+    }
+
+    &__image {
+        height: 2.25rem;
+        width: 2.25rem;
+        border-radius: 50%;
+        }
+    
+    &__inputbox {
+
+        &--text {
+            @include bodycopy-mobile;
+
+        }
+        
+    }
+
+    &__textbox--one, &__textbox--two {
+        min-height: 2.25rem;
+        width: 14rem;
+        background-color: $secondary-alabaster;
+        border: 1px solid $secondary-mercury;
+        resize: none;
+        border-radius: 0.25rem;
+        padding: 0.75rem;
+    }
+    
+
+    &__button {
+        @include btn-comment;
+        width: 14rem;
+    }
+
+    
+}
+

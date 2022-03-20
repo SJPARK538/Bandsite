@@ -518,6 +518,46 @@
     padding: 0 0 2.25rem 0;
   }
 }
+.comment {
+  margin: 0 1rem;
+  background-color: #ffffff;
+}
+.comment__title {
+  font-family: "AvenirDemi";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 2rem 0;
+}
+.comment__image {
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+}
+.comment__inputbox--text {
+  font-family: "AvenirRegular";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+.comment__textbox--one, .comment__textbox--two {
+  min-height: 2.25rem;
+  width: 14rem;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  resize: none;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+}
+.comment__button {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 0;
+  border-style: none;
+  border-radius: 0.25rem;
+  height: 2.5rem;
+  width: 14rem;
+}
+
 * {
   font-family: "AvenirRegular", "AvenirDemi", "AvenirBold", Verdana, Tahoma, sans-serif;
   text-decoration: none;
