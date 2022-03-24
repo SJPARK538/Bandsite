@@ -13,35 +13,62 @@
         margin: 2rem 0;
     }
 
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $secondary-mercury;
+        gap: 1rem;
+        
+    }
+
     &__image {
         height: 2.25rem;
         width: 2.25rem;
         border-radius: 50%;
+        margin-top: 1.5rem;
         }
     
+    
     &__inputbox {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
 
         &--text {
             @include bodycopy-mobile;
-
+            color: $secondary-mercury;
+            margin: 0 0 0.25rem 0;
         }
         
     }
 
-    &__textbox--one, &__textbox--two {
-        min-height: 2.25rem;
-        width: 14rem;
+    &__textbox {
         background-color: $secondary-alabaster;
+        color: $primary-black;
         border: 1px solid $secondary-mercury;
         resize: none;
         border-radius: 0.25rem;
         padding: 0.75rem;
+        
+        &:focus {
+            border: 1px solid $primary-black;
+        }
+
+        &--one {
+            margin: 0 0 1rem 0;
+        }
+
+        &--two {
+            margin: 0 0 1rem 0;
+        }
     }
     
 
     &__button {
         @include btn-comment;
-        width: 14rem;
+        width: auto;
+        margin: 0 0 1rem 0;
+        
     }
 
     
