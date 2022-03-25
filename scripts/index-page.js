@@ -72,3 +72,10 @@ function displayComments(comments){
 
 displayComments(comments);
 
+// DOM API -> to form in html
+const form = document.querySelector('.comment__inputbox');
+
+// form.addEventListener("submit", submitEvent => {
+//     submitEvent.preventDefault();
+   
+// }
