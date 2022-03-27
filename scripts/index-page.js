@@ -21,10 +21,9 @@ let comments = [
 ]
 
 // Function Start
-function displayComments(comments){
+function displayComments(arr){
     let commentContainer = document.querySelector(".comment__default-comment");
-
-    for (let i = 0; i < comments.length; i++){
+    for (let i = 0; i < arr.length; i++){
         // /contain all my default content
         let defaultContainer = document.createElement("div");    
         defaultContainer.classList.add("comment__default")
@@ -48,13 +47,13 @@ function displayComments(comments){
         // Name
         let name = document.createElement("h2");
         name.classList.add("comment__header--name");
-        name.innerText = comments[i]["name"];
+        name.innerText = arr[i]["name"];
         headerContainer.appendChild(name);
         
         // Date
         let date = document.createElement("div");
         date.classList.add("comment__header--date");
-        date.innerText = comments[i]["date"];
+        date.innerText = arr[i]["date"];
         headerContainer.appendChild(date);
 
         // comment text container
@@ -65,7 +64,7 @@ function displayComments(comments){
         // comment
         let comment = document.createElement("p");
         comment.classList.add("comment__text-container--comment")
-        comment.innerText = comments[i]["comment"];
+        comment.innerText = arr[i]["comment"];
         textContainer.appendChild(comment);
     }
 }
@@ -75,7 +74,23 @@ displayComments(comments);
 // DOM API -> to form in html
 const form = document.querySelector('.comment__inputbox');
 
-// form.addEventListener("submit", submitEvent => {
-//     submitEvent.preventDefault();
-   
-// }
+form.addEventListener("submit", event => {
+    event.preventDefault();
+    
+    const newName = event.target.name.value;
+    const newComment = event.target.comment.value;
+
+    
+    const newDate = new Date();
+    let month =  String(newDate.getMonth()+1).padStart(2, '0');
+    let day =String(newDate.getDate()).padStart(2, '0');
+    let year = newDate.getFullYear().toString();
+
+    const today = month + "/" + day + "/" + year;
+
+    displayComments([{name: newName, date: today, comment: newComment }])
+
+    form.reset();
+});
+
+

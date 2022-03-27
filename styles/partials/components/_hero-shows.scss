@@ -1,0 +1,62 @@
+@use "../variables" as *;
+@use "../breakpoints" as *;
+@use "../fonts" as *;
+@use "./mixins"as *;
+
+// Mobile Version
+.hero {
+    margin: 0 auto;
+    background-image: url(../../../assets/Images/hero-shows.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 30vh;
+    
+    &__container {
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        height: 30vh;
+        background-color: rgba(50,50,50,0.5);
+    }
+    &__album--title {
+        @include header-mobile;
+        color: $primary-white;
+        padding: 0;
+        margin: 0 1rem;
+    
+    }
+}
+
+// Tablet Version
+
+@include tablet {
+    .hero {
+        height: 30rem;
+
+        &__container {
+            height: 30rem;
+            }
+        
+            &__title {
+                @include pageheader-tablet;           
+                margin: 0 2.25rem;
+            }
+    }
+}
+
+// Desktop Version
+@include desktop {
+    .hero {
+        height: 36rem;
+
+        &__container {
+            height: 36rem;
+            }
+        
+            &__title {
+                margin: 0 8rem;
+            }
+    }
+}
