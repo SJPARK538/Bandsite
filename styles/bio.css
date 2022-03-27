@@ -585,6 +585,48 @@
 .comment__button:hover {
   background-color: #000000;
 }
+.comment__default {
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.comment__image-container-one {
+  width: 10%;
+}
+.comment__header {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.comment__header--name {
+  font-family: "AvenirDemi";
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+.comment__header--date {
+  font-family: "AvenirRegular";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  color: #AFAFAF;
+  margin-top: 1rem;
+}
+.comment__header--image-one {
+  background-color: #e1e1e1;
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+  margin-top: 1rem;
+}
+.comment__text-container {
+  display: flex;
+  width: 100%;
+}
+.comment__text-container--comment {
+  font-family: "AvenirRegular";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
 
 @media screen and (min-width: 768px) {
   .comment {
