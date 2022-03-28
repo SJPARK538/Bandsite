@@ -31,35 +31,40 @@ function displayComments(arr){
 
         // image container
         let imageContainer = document.createElement("div");
-        imageContainer.classList.add("comment__image-container-one");
+        imageContainer.classList.add("comment__image-container");
         defaultContainer.appendChild(imageContainer);
+
+        // content container
+        let contentContainer = document.createElement("div");
+        contentContainer.classList.add("comment__content-container")
+        defaultContainer.appendChild(contentContainer);
 
         // header container 
         let headerContainer = document.createElement("div");
-        headerContainer.classList.add("comment__header");
-        defaultContainer.appendChild(headerContainer);
+        headerContainer.classList.add("comment__content-header");
+        contentContainer.appendChild(headerContainer);
 
         // Image 
         let image = document.createElement("div");
-        image.classList.add("comment__header--image-one");
+        image.classList.add("comment__image-container--image");
         imageContainer.appendChild(image);
 
         // Name
         let name = document.createElement("h2");
-        name.classList.add("comment__header--name");
+        name.classList.add("comment__content-header--name");
         name.innerText = arr[i]["name"];
         headerContainer.appendChild(name);
         
         // Date
         let date = document.createElement("div");
-        date.classList.add("comment__header--date");
+        date.classList.add("comment__content-header--date");
         date.innerText = arr[i]["date"];
         headerContainer.appendChild(date);
 
         // comment text container
         let textContainer = document.createElement("div");
         textContainer.classList.add("comment__text-container");
-        defaultContainer.appendChild(textContainer);
+        contentContainer.appendChild(textContainer);
 
         // comment
         let comment = document.createElement("p");
@@ -76,7 +81,8 @@ const form = document.querySelector('.comment__inputbox');
 
 form.addEventListener("submit", event => {
     event.preventDefault();
-    
+   
+ 
     const newName = event.target.name.value;
     const newComment = event.target.comment.value;
 
