@@ -20,12 +20,14 @@
         height: 30vh;
         background-color: rgba(50,50,50,0.5);
     }
-    &__album--title {
+    &__album{
         @include header-mobile;
         color: $primary-white;
-        padding: 0;
         margin: 0 1rem;
-    
+        
+        &--title {
+            margin: 0 1rem;
+        }
     }
 }
 

@@ -10,7 +10,7 @@
 
     &__title {
         @include header-mobile;
-        margin: 2rem 0;
+        margin: 1.5rem 0;
     }
 
     &__container{
@@ -29,7 +29,7 @@
 
     
     &__inputbox {
-        display: flex;
+        display: flex; 
         flex-direction: column;
         width: 100%;
 

@@ -9,6 +9,7 @@
 
     &__title {
         margin: 0 1rem;
+        padding-top: 1.5rem;
         color: $primary-black;
         @include header-mobile;
     }
@@ -26,6 +27,7 @@
         margin-right: auto;
         height: 50vw;
         width: 90vw;
+        margin-bottom: 1rem;
 
         &:hover {
             filter: grayscale(0%);
