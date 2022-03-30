@@ -98,49 +98,107 @@
   background-repeat: no-repeat;
   background-position: center;
   width: 100vw;
-  height: 30vh;
+  height: 33vh;
 }
 .hero__container {
-  display: flex;
-  align-items: center;
-  width: 100vw;
-  height: 30vh;
+  height: 33vh;
   background-color: rgba(50, 50, 50, 0.5);
+  display: flex;
+  flex-direction: column;
 }
 .hero__album {
   font-family: "AvenirDemi";
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   color: #ffffff;
-  margin: 0 1rem;
+  margin: 1.5rem 1rem;
 }
 .hero__album--title {
-  margin: 0 1rem;
+  font-family: "AvenirDemi";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 0 1rem 1.5rem 1rem;
+  color: #ffffff;
+}
+.hero__song-container {
+  margin: 0 auto;
+}
+.hero__song {
+  width: 18rem;
+  height: 5rem;
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    height: 30rem;
+    margin: 0 auto;
+    width: 100vw;
+    height: 65vh;
   }
   .hero__container {
-    height: 30rem;
+    height: 65vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
   }
-  .hero__title {
+  .hero__album {
+    font-family: "Avenir";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin: 3rem 2.25rem 1.5rem 2.25rem;
+    width: 70vw;
+  }
+  .hero__album--title {
     font-family: "AvenirDemi";
     font-size: 3.75rem;
     line-height: 4.25rem;
-    margin: 0 2.25rem;
+    margin: 0 2.25rem 3rem 2.25rem;
+    width: 70vw;
+  }
+  .hero__song-container {
+    margin: 0 0 2.25rem 2.25rem;
+    width: 70vw;
+  }
+  .hero__song {
+    width: 25rem;
+    height: 9rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    height: 36rem;
+    width: 100vw;
+    height: 70vh;
   }
   .hero__container {
-    height: 36rem;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
-  .hero__title {
-    margin: 0 8rem;
+  .hero__text-container {
+    width: 50vw;
+  }
+  .hero__album {
+    font-family: "AvenirDemi";
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin: 0 0 0 8rem;
+    width: 30vw;
+  }
+  .hero__album--title {
+    font-family: "AvenirDemi";
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-size: 3rem;
+    margin: 0 0 0 8rem;
+    width: 30vw;
+  }
+  .hero__song-container {
+    margin: 1.4rem 0 0 0;
+    width: 50vw;
+  }
+  .hero__song {
+    width: 30rem;
+    height: 9rem;
   }
 }
 .footer {
