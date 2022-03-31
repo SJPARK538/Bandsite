@@ -4,62 +4,74 @@
 @use "./mixins"as *;
 
 .shows {
-    &__title {
-        @include header-mobile;
-        margin: 2.25rem 1rem 0 0.75rem;
+    &__header {
+        display: none;
     }
 
-    &__container {
-        display: flex;
-        flex-direction: column;
-    }
+//     &__title {
+//         @include header-mobile;
+//         margin: 2.25rem 1rem 0 0.75rem;
+//     }
 
-    &__content {
-        border-bottom: 1px solid $secondary-mercury;
-    }
+//     &__container {
+//         display: flex;
+//         flex-direction: column;
+//     }
 
-    &__header-date {
-        @include bodycopy-mobile;
-        margin: 1.5rem 1rem 0  1rem;
-        color: $primary-silver;
+//     &__content {
+//         border-bottom: 1px solid $secondary-mercury;
+//     }
 
-        &--value {
-            color: $primary-black;
-            @include bodycopy-bold-mobile;
-        }
-    }
+//     &__title-date {
+//         @include bodycopy-mobile;
+//         margin: 1.5rem 1rem 0  1rem;
+//         color: $primary-silver;
 
-    &__header-venue {
-        @include bodycopy-mobile;
-        margin: 1.5rem 1rem 0  1rem;
-        color: $primary-silver;
+//         &--value {
+//             color: $primary-black;
+//             @include bodycopy-bold-mobile;
+//         }
+//     }
 
-        &--value {
-            color: $primary-black;
-        }
-    }
+//     &__title-venue {
+//         @include bodycopy-mobile;
+//         margin: 1.5rem 1rem 0  1rem;
+//         color: $primary-silver;
 
-    &__header-location {
-        @include bodycopy-mobile;
-        margin: 1.5rem 1rem 0 1rem;
-        color: $primary-silver;
+//         &--value {
+//             color: $primary-black;
+//         }
+//     }
 
-        &--value {
-            color: $primary-black;
-        }
-    }
+//     &__title-location {
+//         @include bodycopy-mobile;
+//         margin: 1.5rem 1rem 0 1rem;
+//         color: $primary-silver;
 
-    &__header-button {
-        @include btn;
-        width: 90%;
-        margin: 1rem;
-    }
+//         &--value {
+//             color: $primary-black;
+//         }
+//     }
+
+//     &__title-button {
+//         @include btn;
+//         width: 90%;
+//         margin: 1rem;
+//     }
 }
 
 @include tablet {
     .shows {
-        &__container {
- 
+        &__header {
+            display: flex;
+
+        }
+
+        &__content {
+
+            &--date-title, &--venue-title, &--location-title{
+                display: none;
+            }
         }
     }
 }
