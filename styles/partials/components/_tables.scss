@@ -1,0 +1,65 @@
+@use "../variables" as *;
+@use "../breakpoints" as *;
+@use "../fonts" as *;
+@use "./mixins"as *;
+
+.shows {
+    &__title {
+        @include header-mobile;
+        margin: 2.25rem 1rem 0 0.75rem;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__content {
+        border-bottom: 1px solid $secondary-mercury;
+    }
+
+    &__header-date {
+        @include bodycopy-mobile;
+        margin: 1.5rem 1rem 0  1rem;
+        color: $primary-silver;
+
+        &--value {
+            color: $primary-black;
+            @include bodycopy-bold-mobile;
+        }
+    }
+
+    &__header-venue {
+        @include bodycopy-mobile;
+        margin: 1.5rem 1rem 0  1rem;
+        color: $primary-silver;
+
+        &--value {
+            color: $primary-black;
+        }
+    }
+
+    &__header-location {
+        @include bodycopy-mobile;
+        margin: 1.5rem 1rem 0 1rem;
+        color: $primary-silver;
+
+        &--value {
+            color: $primary-black;
+        }
+    }
+
+    &__header-button {
+        @include btn;
+        width: 90%;
+        margin: 1rem;
+    }
+}
+
+@include tablet {
+    .shows {
+        &__container {
+ 
+        }
+    }
+}

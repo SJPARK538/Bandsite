@@ -81,8 +81,7 @@ const form = document.querySelector('.comment__inputbox');
 
 form.addEventListener("submit", event => {
     event.preventDefault();
-   
- 
+
     const newName = event.target.name.value;
     const newComment = event.target.comment.value;
 
