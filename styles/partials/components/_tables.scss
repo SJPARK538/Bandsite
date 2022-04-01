@@ -73,16 +73,60 @@
             margin: 0 2.25rem;
             display: flex;
             justify-content: space-between;
-            width: 75%;
+            @include bodycopy-tablet;
+            
+
+            &-date, &-venue, &-location, &-button {
+                margin: 1rem 0;
+                width: 20vw;
+            }
         }
 
         &__content {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             margin: 0 2.25rem;
+
+            &:hover {
+                background-color: $secondary-alabaster;
+            }
             
             &-label{
                 display: none;
+                
+                
+                &--date{
+                    @include bodycopy-tablet;
+                    font-family: "AvenirDemi";
+                    margin: 0;
+                    width: 20vw
+                }
+    
+                &--venue {
+                    @include bodycopy-tablet;
+                    margin: 0;
+                    width: 20vw
+                }
+    
+                &--location {
+                    @include bodycopy-tablet; 
+                    margin: 0;
+                    width: 20vw
+                }
+
+                &--button {
+                    @include btn;
+    
+                    &:hover {
+                        background-color: $primary-black;
+                        box-shadow:  2px 2px 20px;
+                    }
+                }
+            }
+            &-btn-container {
+                margin-top: 1rem;
+                width: 20vw;
             }
         }
     }
