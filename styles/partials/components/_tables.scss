@@ -4,74 +4,87 @@
 @use "./mixins"as *;
 
 .shows {
+    &__title {
+        @include header-mobile;
+        margin: 2.25rem 1rem 0 1rem;
+    }
+
     &__header {
         display: none;
     }
 
-//     &__title {
-//         @include header-mobile;
-//         margin: 2.25rem 1rem 0 0.75rem;
-//     }
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
 
-//     &__container {
-//         display: flex;
-//         flex-direction: column;
-//     }
+    &__content {
+        border-bottom: 1px solid $secondary-mercury;
 
-//     &__content {
-//         border-bottom: 1px solid $secondary-mercury;
-//     }
+        &-label {
+            @include bodycopy-mobile;
+            font-size: 0.7rem;
+            color: $primary-silver;
+            margin: 1.25rem 1rem 0 1rem;
+            
+            &--date{
+                @include bodycopy-bold-mobile;
+                color: $primary-black;
+                margin: 0.25rem 1rem 0 1rem;
+            }
 
-//     &__title-date {
-//         @include bodycopy-mobile;
-//         margin: 1.5rem 1rem 0  1rem;
-//         color: $primary-silver;
+            &--venue {
+                @include bodycopy-mobile;
+                color: $primary-black;
+                margin: 0.25rem 1rem 0 1rem;
+            }
 
-//         &--value {
-//             color: $primary-black;
-//             @include bodycopy-bold-mobile;
-//         }
-//     }
+            &--location {
+                @include bodycopy-mobile;
+                color: $primary-black;
+                margin: 0.25rem 1rem 0 1rem;
+            }
+        
+            &--button {
+                @include btn;
+                width: 100%;
+                margin-bottom: 1rem;
 
-//     &__title-venue {
-//         @include bodycopy-mobile;
-//         margin: 1.5rem 1rem 0  1rem;
-//         color: $primary-silver;
-
-//         &--value {
-//             color: $primary-black;
-//         }
-//     }
-
-//     &__title-location {
-//         @include bodycopy-mobile;
-//         margin: 1.5rem 1rem 0 1rem;
-//         color: $primary-silver;
-
-//         &--value {
-//             color: $primary-black;
-//         }
-//     }
-
-//     &__title-button {
-//         @include btn;
-//         width: 90%;
-//         margin: 1rem;
-//     }
+                &:hover {
+                    background-color: $primary-black;
+                    box-shadow:  2px 2px 20px;
+                }
+            }
+        }
+        &-btn-container {
+            margin: 1.25rem 1rem 0 1rem;;
+        }
+    }
 }
 
 @include tablet {
     .shows {
-        &__header {
-            display: flex;
+        &__title {
+            @include sectionheader-tablet;
+            margin: 2.25rem 2.25rem 0 2.25rem;
+        }
 
+        &__header {
+            margin: 0 2.25rem;
+            display: flex;
+            justify-content: space-between;
+            width: 75%;
         }
 
         &__content {
-
-            &--date-title, &--venue-title, &--location-title{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 2.25rem;
+            
+            &-label{
                 display: none;
             }
         }
     }
 }
+

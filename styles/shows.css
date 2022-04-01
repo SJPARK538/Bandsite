@@ -405,15 +405,93 @@
     padding: 0 0 2.25rem 0;
   }
 }
+.shows__title {
+  font-family: "AvenirDemi";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 2.25rem 1rem 0 1rem;
+}
 .shows__header {
   display: none;
 }
+.shows__container {
+  display: flex;
+  flex-direction: column;
+}
+.shows__content {
+  border-bottom: 1px solid #e1e1e1;
+}
+.shows__content-label {
+  font-family: "AvenirRegular";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-size: 0.7rem;
+  color: #AFAFAF;
+  margin: 1.25rem 1rem 0 1rem;
+}
+.shows__content-label--date {
+  font-family: "AvenirDemi";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  color: #323232;
+  margin: 0.25rem 1rem 0 1rem;
+}
+.shows__content-label--venue {
+  font-family: "AvenirRegular";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  color: #323232;
+  margin: 0.25rem 1rem 0 1rem;
+}
+.shows__content-label--location {
+  font-family: "AvenirRegular";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  color: #323232;
+  margin: 0.25rem 1rem 0 1rem;
+}
+.shows__content-label--button {
+  background-color: #323232;
+  color: #ffffff;
+  text-align: center;
+  padding: 0;
+  border-style: none;
+  border-radius: 0.25rem;
+  height: 2.5rem;
+  font-family: "AvenirDemi";
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.shows__content-label--button:hover {
+  background-color: #000000;
+}
+.shows__content-label--button:hover {
+  background-color: #323232;
+  box-shadow: 2px 2px 20px;
+}
+.shows__content-btn-container {
+  margin: 1.25rem 1rem 0 1rem;
+}
 
 @media screen and (min-width: 768px) {
-  .shows__header {
-    display: flex;
+  .shows__title {
+    font-family: "Avenir";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin: 2.25rem 2.25rem 0 2.25rem;
   }
-  .shows__content--date-title, .shows__content--venue-title, .shows__content--location-title {
+  .shows__header {
+    margin: 0 2.25rem;
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+  }
+  .shows__content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2.25rem;
+  }
+  .shows__content-label {
     display: none;
   }
 }

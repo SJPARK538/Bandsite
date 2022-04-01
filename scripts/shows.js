@@ -30,63 +30,6 @@ let tables = [
         location: "San Francisco, CA"
     }
 ]
-
-// // Function Start
-// function table(arr){
-//     for (let i = 0; i < arr.length; i++){
-//      // a container that includes everything
-//     let tableContainer = document.querySelector(".shows__container");
-    
-//     // Header
-//     let contentContainer = document.createElement("div");
-//     contentContainer.classList.add("shows__content");
-//     tableContainer.appendChild(contentContainer);
-
-//     // Inside Header(Date, Venue, Location, button)
-//     // Date
-//     let dateHeader = document.createElement("h3");
-//     dateHeader.classList.add("shows__header-date");
-//     contentContainer.appendChild(dateHeader);
-//     dateHeader.innerText = "DATE";
-
-//     // Venue
-//     let venueHeader = document.createElement("h3");
-//     venueHeader.classList.add("shows__header-venue");
-//     contentContainer.appendChild(venueHeader);
-//     venueHeader.innerText = "VENUE";
-
-//     // Location
-//     let locationHeader = document.createElement("h3");
-//     locationHeader.classList.add("shows__header-location");
-//     contentContainer.appendChild(locationHeader);
-//     locationHeader.innerText = "LOCATION";
-
-//     // Button
-//     let buttonHeader = document.createElement("button");
-//     buttonHeader.classList.add("shows__header-button");
-//     contentContainer.appendChild(buttonHeader);
-//     buttonHeader.innerText = "BUY TICKET";
-
-//     // Data InputField
-//     let date = document.createElement("p");
-//     date.classList.add("shows__header-date--value")
-//     dateHeader.appendChild(date);
-//     date.innerText = arr[i]["date"];
-
-//     let venue = document.createElement("p");
-//     venue.classList.add("shows__header-venue--value")
-//     venueHeader.appendChild(venue);
-//     venue.innerText = arr[i]["venue"];
-    
-//     let location = document.createElement("p");
-//     location.classList.add("shows__header-location--value")
-//     locationHeader.appendChild(location);
-//     location.innerText = arr[i]["location"];
-// }
-// }
-// table(tables);
-
-
 // Function Start
 function table(arr){
      // a container that includes everything
@@ -117,6 +60,11 @@ function table(arr){
     headerContainer.appendChild(locationHeader);
     locationHeader.innerText = "LOCATION";
 
+    let buttonHeader = document.createElement("h3");
+    buttonHeader.classList.add("shows__header-button");
+    headerContainer.appendChild(buttonHeader);
+    
+
     // -----------------------------------------ALL------------------------------------------//
     for (let i = 0; i < arr.length; i++){
        // Content
@@ -127,44 +75,45 @@ function table(arr){
     // Inside Header(Date, Venue, Location, button)
     // Date
     let dateHeader = document.createElement("h3");
-    dateHeader.classList.add("shows__content--date-title");
+    dateHeader.classList.add("shows__content-label");
     contentContainer.appendChild(dateHeader);
     dateHeader.innerText = "DATE";
 
     let date = document.createElement("p");
-    date.classList.add("shows__content--date")
+    date.classList.add("shows__content-label--date")
     contentContainer.appendChild(date);
     date.innerText = arr[i]["date"];
 
     // Venue
     let venueHeader = document.createElement("h3");
-    venueHeader.classList.add("shows__content--venue-title");
+    venueHeader.classList.add("shows__content-label");
     contentContainer.appendChild(venueHeader);
     venueHeader.innerText = "VENUE";
 
     let venue = document.createElement("p");
-    venue.classList.add("shows__content--venue")
+    venue.classList.add("shows__content-label--venue")
     contentContainer.appendChild(venue);
     venue.innerText = arr[i]["venue"];
 
     // Location
     let locationHeader = document.createElement("h3");
-    locationHeader.classList.add("shows__content--location-title");
+    locationHeader.classList.add("shows__content-label");
     contentContainer.appendChild(locationHeader);
     locationHeader.innerText = "LOCATION";
 
     let location = document.createElement("p");
-    location.classList.add("shows__content--location")
+    location.classList.add("shows__content-label--location")
     contentContainer.appendChild(location);
     location.innerText = arr[i]["location"];
 
     // Button
     let buttonHeader = document.createElement("h3");
-    buttonHeader.classList.add("shows__content--button-title");
+    buttonHeader.classList.add("shows__content-btn-container");
     contentContainer.appendChild(buttonHeader);
+    
 
     let button = document.createElement("button");
-    button.classList.add("shows__content--button");
+    button.classList.add("shows__content-label--button");
     buttonHeader.appendChild(button);
     button.innerText = "BUY TICKET";
 }
