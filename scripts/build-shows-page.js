@@ -120,3 +120,19 @@ function table(arr){
 }
 table(tables);
 
+// Selected row event
+const select = document.querySelector('.shows__content');
+
+select.addEventListener("click", event =>{
+    event.preventDefault();
+    select.style.backgroundColor = "#e1e1e1";
+})
+
+select.addEventListener("unclick", event =>{
+    event.preventDefault();
+    select.style.backgroundColor = "#ffffff";
+
+    select.reset();
+})
+
+

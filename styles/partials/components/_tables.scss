@@ -70,15 +70,17 @@
         }
 
         &__header {
-            margin: 0 2.25rem;
+            margin: 2.25rem 2.25rem 0 2.25rem;
             display: flex;
             justify-content: space-between;
             @include bodycopy-tablet;
+            font-size: 0.7rem;
             
 
             &-date, &-venue, &-location, &-button {
-                margin: 1rem 0;
+                margin: 0;
                 width: 20vw;
+                
             }
         }
 
@@ -87,6 +89,7 @@
             justify-content: space-between;
             align-items: center;
             margin: 0 2.25rem;
+            
 
             &:hover {
                 background-color: $secondary-alabaster;
@@ -117,6 +120,7 @@
 
                 &--button {
                     @include btn;
+                    width: 20vw;
     
                     &:hover {
                         background-color: $primary-black;
@@ -125,8 +129,90 @@
                 }
             }
             &-btn-container {
-                margin-top: 1rem;
+                margin: 1rem 0 0 0;
                 width: 20vw;
+            }
+        }
+    }
+}
+
+@include desktop {
+    .shows {
+        display: flex;
+        
+        &__title {
+            @include sectionheader-tablet;
+            margin: 3rem 8rem 0 8rem;
+            width: 20vh;
+        }
+
+        &__header {
+            margin: 0 8rem 0 2.25rem;
+            display: flex;
+            justify-content: space-between;
+            @include bodycopy-tablet;
+            font-size: 0.7rem;
+            
+
+            &-date, &-venue, &-location, &-button {
+                margin: 0;
+                width: 20vw;
+                
+            }
+        }
+        &__container {
+            width: 70vw;
+            margin: 3rem 0 2.25rem 0;
+            
+        }
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 8rem 0 2.25rem;
+            
+
+            &:hover {
+                background-color: $secondary-alabaster;
+            }
+            
+            &-label{
+                display: none;
+                
+                
+                &--date{
+                    @include bodycopy-tablet;
+                    font-family: "AvenirDemi";
+                    margin: 0;
+                    width: 12vw;
+                }
+    
+                &--venue {
+                    @include bodycopy-tablet;
+                    margin: 0;
+                    width: 12vw;
+                }
+    
+                &--location {
+                    @include bodycopy-tablet; 
+                    margin: 0;
+                    width: 13.5vw;
+                }
+
+                &--button {
+                    @include btn;
+                    width: 12.8vw;
+    
+                    &:hover {
+                        background-color: $primary-black;
+                        box-shadow:  2px 2px 20px;
+                    }
+                }
+            }
+            &-btn-container {
+                margin: 1rem 0 0 0;
+                width: 12.8vw;
             }
         }
     }
