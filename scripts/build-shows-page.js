@@ -128,11 +128,3 @@ select.addEventListener("click", event =>{
     select.style.backgroundColor = "#e1e1e1";
 })
 
-select.addEventListener("unclick", event =>{
-    event.preventDefault();
-    select.style.backgroundColor = "#ffffff";
-
-    select.reset();
-})
-
-

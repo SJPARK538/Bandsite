@@ -82,12 +82,13 @@
     height: 5rem;
     font-family: "AvenirDemi";
     color: #e1e1e1;
+    align-items: center;
   }
   .header .primary-nav__list-item {
     display: flex;
     align-items: center;
     width: auto;
-    height: auto;
+    height: 5rem;
     padding: 0;
   }
 }
@@ -421,6 +422,9 @@
 .shows__content {
   border-bottom: 1px solid #e1e1e1;
 }
+.shows__content:hover {
+  background-color: #fafafa;
+}
 .shows__content-label {
   font-family: "AvenirRegular";
   font-size: 0.8125rem;
@@ -498,9 +502,6 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 2.25rem;
-  }
-  .shows__content:hover {
-    background-color: #fafafa;
   }
   .shows__content-label {
     display: none;
@@ -583,9 +584,6 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 8rem 0 2.25rem;
-  }
-  .shows__content:hover {
-    background-color: #fafafa;
   }
   .shows__content-label {
     display: none;
