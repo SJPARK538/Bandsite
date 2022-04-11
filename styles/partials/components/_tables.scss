@@ -20,9 +20,15 @@
 
     &__content {
         border-bottom: 1px solid $secondary-mercury;
+
+        &:active {
+            background-color: $secondary-mercury;
+        }
+        
         &:hover {
             background-color: $secondary-alabaster;
         }
+        
 
         &-label {
             @include bodycopy-mobile;

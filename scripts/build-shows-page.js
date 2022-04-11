@@ -31,7 +31,7 @@ let tables = [
     }
 ]
 // Function Start
-function table(arr){
+function renderTable(arr){
      // a container that includes everything
     let tableContainer = document.querySelector(".shows__container");
 
@@ -118,13 +118,20 @@ function table(arr){
     button.innerText = "BUY TICKET";
 }
 }
-table(tables);
+renderTable(tables);
 
 // Selected row event
-const select = document.querySelector('.shows__content');
+let schedules = document.querySelector(".shows__content");
 
-select.addEventListener("click", event =>{
-    event.preventDefault();
-    select.style.backgroundColor = "#e1e1e1";
+schedules.forEach(content => {
+    content.addEventListener("click", function(){
+        schedules.forEach(content => content.classList.remove("active"));
+        this.classList.add("active");
+    });
 })
+
+// select.addEventListener("click", event =>{
+//     event.preventDefault();
+//     select.style.backgroundColor = "#e1e1e1";
+// })
 

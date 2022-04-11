@@ -73,29 +73,72 @@ function displayComments(arr){
         textContainer.appendChild(comment);
     }
 }
-
 displayComments(comments);
+
 
 // DOM API -> to form in html
 const form = document.querySelector('.comment__inputbox');
 
 form.addEventListener("submit", event => {
     event.preventDefault();
-
-    const newName = event.target.name.value;
-    const newComment = event.target.comment.value;
-
     
+    const newComment = {};
+    newComment.name = event.target.name.value;
+    newComment.comment = event.target.comment.value;
+
+    let commentContainer = document.querySelector(".comment__default-comment");
+    
+    let defaultContainer = document.createElement("div");    
+    defaultContainer.classList.add("comment__default")
+    commentContainer.appendChild(defaultContainer);
+
+    let imageContainer = document.createElement("div");
+    imageContainer.classList.add("comment__image-container");
+    defaultContainer.appendChild(imageContainer);
+
+    let contentContainer = document.createElement("div");
+    contentContainer.classList.add("comment__content-container")
+    defaultContainer.appendChild(contentContainer);
+
+    let headerContainer = document.createElement("div");
+    headerContainer.classList.add("comment__content-header");
+    contentContainer.appendChild(headerContainer);
+    
+    let image = document.createElement("div");
+    image.classList.add("comment__image-container--image");
+    imageContainer.appendChild(image);
+
+    let name = document.createElement("h2");
+    name.classList.add("comment__content-header--name");
+    name.innerText = newComment.name;
+    headerContainer.appendChild(name);
+
     const newDate = new Date();
     let month =  String(newDate.getMonth()+1).padStart(2, '0');
     let day =String(newDate.getDate()).padStart(2, '0');
     let year = newDate.getFullYear().toString();
-
     const today = month + "/" + day + "/" + year;
 
-    displayComments([{name: newName, date: today, comment: newComment }])
+    let date = document.createElement("div");
+    date.classList.add("comment__content-header--date");
+    date.innerText = today;
+    headerContainer.appendChild(date);
 
-    form.reset();
+    let textContainer = document.createElement("div");
+    textContainer.classList.add("comment__text-container");
+    contentContainer.appendChild(textContainer);
+
+    let comment = document.createElement("p");
+    comment.classList.add("comment__text-container--comment");
+    comment.innerText = newComment.comment;
+    textContainer.appendChild(comment);
+
+    let top = document.querySelector(".comment__default-comment");
+    top.insertBefore(defaultContainer, top.childNodes[0]);
+
+    let clearComment = document.querySelector('.comment__inputbox');
+    clearComment.reset();
 });
+
 
 

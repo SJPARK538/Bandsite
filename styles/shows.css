@@ -422,6 +422,9 @@
 .shows__content {
   border-bottom: 1px solid #e1e1e1;
 }
+.shows__content:active {
+  background-color: #e1e1e1;
+}
 .shows__content:hover {
   background-color: #fafafa;
 }
