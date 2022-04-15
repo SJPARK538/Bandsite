@@ -1,35 +1,6 @@
-let tables = [
-    {
-        date: "Mon Sept 06 2021",
-        venue: "Ronald Lane",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Mon Sept 06 2021",
-        venue: "Pier 3 East",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Fri Oct 15 2021",
-        venue: "View Lounge",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Sat Nov 06 2021",
-        venue: "Hyatt Agency",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Fri Nov 26 2021",
-        venue: "Moscow Center",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Wed Dec 15 2021",
-        venue: "Press Club",
-        location: "San Francisco, CA"
-    }
-]
+
+const apiKey = "4498b71c-654e-415a-a34f-51f66fdd839f";
+
 // Function Start
 function renderTable(arr){
      // a container that includes everything
@@ -69,8 +40,23 @@ function renderTable(arr){
     for (let i = 0; i < arr.length; i++){
        // Content
     let contentContainer = document.createElement("div");
-    contentContainer.classList.add("shows__content");
+    contentContainer.classList.add("shows__content");  
+    
+    // contentContainer.addEventListener("click", event => {
+    // let schedules = document.querySelectorAll(".shows__content");
+
+    //     let select = document.querySelector(".test");
+    //     if (select !== null){
+    //     select.classList.remove("test");
+    //     }
+    //     event.target.classList.add("test");
+    // })
+
+
+
     tableContainer.appendChild(contentContainer);
+
+    
 
     // Inside Header(Date, Venue, Location, button)
     // Date
@@ -80,9 +66,10 @@ function renderTable(arr){
     dateHeader.innerText = "DATE";
 
     let date = document.createElement("p");
-    date.classList.add("shows__content-label--date")
+    date.classList.add("shows__content-label--date");
     contentContainer.appendChild(date);
-    date.innerText = arr[i]["date"];
+    let dataDates = new Date(+arr[i]["date"]);
+    date.innerText = (dataDates.toDateString());
 
     // Venue
     let venueHeader = document.createElement("h3");
@@ -93,7 +80,7 @@ function renderTable(arr){
     let venue = document.createElement("p");
     venue.classList.add("shows__content-label--venue")
     contentContainer.appendChild(venue);
-    venue.innerText = arr[i]["venue"];
+    venue.innerText = arr[i]["place"];
 
     // Location
     let locationHeader = document.createElement("h3");
@@ -118,18 +105,48 @@ function renderTable(arr){
     button.innerText = "BUY TICKET";
 }
 }
-renderTable(tables);
+
+
+let showdates = axios.get(
+    "https://project-1-api.herokuapp.com/showdates?api_key=4498b71c-654e-415a-a34f-51f66fdd839f"
+    );
+
+    showdates.then(response =>{
+    renderTable(
+        response.data
+    )
+    })
+
+
+
+
+
+
+
+
 
 // Selected row event
-let schedules = document.querySelector(".shows__content");
 
-schedules.forEach(content => {
-    content.addEventListener("click", function(){
-        schedules.forEach(content => content.classList.remove("active"));
-        this.classList.add("active");
-    });
-})
 
+
+
+// for (let i = 0; i < schedules.length; i++){
+//     schedules[i].addEventListener("click", event =>{
+//         event.preventDefault();
+//         console.log(event);
+//     })
+// }
+// let schedules = document.querySelectorAll(".shows__content");
+
+// schedules.forEach(content => {
+
+//     content.addEventListener("click", function(data){
+//         schedules.forEach(content => content.classList.remove(".test"));
+//         this.classList.add(".test");
+//     });
+// })
+
+// const select = document.querySelector(".shows_content")
 // select.addEventListener("click", event =>{
 //     event.preventDefault();
 //     select.style.backgroundColor = "#e1e1e1";

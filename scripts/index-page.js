@@ -86,8 +86,8 @@ form.addEventListener("submit", event => {
     newComment.then(()=> {
         getComments();
 
-    newComment.catch(()=> {
-        error();
+    newComment.catch((error)=> {
+        console.log(error);
     })
         
     });
@@ -99,7 +99,7 @@ form.addEventListener("submit", event => {
 // Error Function
 function error(){
     if(event.target.name.value == " "|| event.target.name.comment == "" ){
-        console.log("Required Field is empty");
+        
     }
 
 }

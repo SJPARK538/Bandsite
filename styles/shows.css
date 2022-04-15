@@ -406,6 +406,10 @@
     padding: 0 0 2.25rem 0;
   }
 }
+.test {
+  background-color: red;
+}
+
 .shows__title {
   font-family: "AvenirDemi";
   font-size: 1.5rem;
@@ -421,9 +425,6 @@
 }
 .shows__content {
   border-bottom: 1px solid #e1e1e1;
-}
-.shows__content:active {
-  background-color: #e1e1e1;
 }
 .shows__content:hover {
   background-color: #fafafa;

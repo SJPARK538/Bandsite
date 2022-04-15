@@ -3,6 +3,10 @@
 @use "../fonts" as *;
 @use "./mixins"as *;
 
+.test {
+    background-color: red;
+}
+
 .shows {
     &__title {
         @include header-mobile;
@@ -16,19 +20,21 @@
     &__container {
         display: flex;
         flex-direction: column;
+
     }
 
     &__content {
         border-bottom: 1px solid $secondary-mercury;
 
-        &:active {
-            background-color: $secondary-mercury;
-        }
-        
+
+
         &:hover {
             background-color: $secondary-alabaster;
         }
-        
+
+        // &:active {
+        //     background-color: red;
+        // }
 
         &-label {
             @include bodycopy-mobile;
