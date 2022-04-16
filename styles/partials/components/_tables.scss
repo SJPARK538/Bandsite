@@ -32,10 +32,6 @@
             background-color: $secondary-alabaster;
         }
 
-        // &:active {
-        //     background-color: red;
-        // }
-
         &-label {
             @include bodycopy-mobile;
             font-size: 0.7rem;

@@ -41,23 +41,24 @@ function renderTable(arr){
        // Content
     let contentContainer = document.createElement("div");
     contentContainer.classList.add("shows__content");  
-    
-    // contentContainer.addEventListener("click", event => {
-    // let schedules = document.querySelectorAll(".shows__content");
-
-    //     let select = document.querySelector(".test");
-    //     if (select !== null){
-    //     select.classList.remove("test");
-    //     }
-    //     event.target.classList.add("test");
-    // })
-
-
-
     tableContainer.appendChild(contentContainer);
-
     
+    let schedules = document.querySelectorAll(".shows__content");
+    schedules[i].addEventListener("click", event => {
+        event.preventDefault();
+        console.log(schedules[i]);
 
+// --------------------------------------Active State--------------------------------------//
+    for (let i = 0; i < schedules.length; i++){
+        let select = document.querySelector(".test");
+        if (select !== null){
+        select.classList.remove("test");
+        }
+        event.target.classList.add("test");
+    }
+    })
+/////////////////////////////////////////////////////////////////////////////////////////////
+    
     // Inside Header(Date, Venue, Location, button)
     // Date
     let dateHeader = document.createElement("h3");
@@ -106,7 +107,6 @@ function renderTable(arr){
 }
 }
 
-
 let showdates = axios.get(
     "https://project-1-api.herokuapp.com/showdates?api_key=4498b71c-654e-415a-a34f-51f66fdd839f"
     );
@@ -117,38 +117,4 @@ let showdates = axios.get(
     )
     })
 
-
-
-
-
-
-
-
-
-// Selected row event
-
-
-
-
-// for (let i = 0; i < schedules.length; i++){
-//     schedules[i].addEventListener("click", event =>{
-//         event.preventDefault();
-//         console.log(event);
-//     })
-// }
-// let schedules = document.querySelectorAll(".shows__content");
-
-// schedules.forEach(content => {
-
-//     content.addEventListener("click", function(data){
-//         schedules.forEach(content => content.classList.remove(".test"));
-//         this.classList.add(".test");
-//     });
-// })
-
-// const select = document.querySelector(".shows_content")
-// select.addEventListener("click", event =>{
-//     event.preventDefault();
-//     select.style.backgroundColor = "#e1e1e1";
-// })
 
