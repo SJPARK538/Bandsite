@@ -53,8 +53,6 @@ function renderTable(arr){
         }
         schedules[i].classList.add("active");
 });
-
-
 /////////////////////////////////////////////////////////////////////////////////////////////
     
     // Inside Header(Date, Venue, Location, button)
@@ -106,7 +104,7 @@ function renderTable(arr){
 }
 
 let showdates = axios.get(
-    "https://project-1-api.herokuapp.com/showdates?api_key=4498b71c-654e-415a-a34f-51f66fdd839f"
+    `https://project-1-api.herokuapp.com/showdates?api_key=${apiKey}`
     );
 
     showdates.then(response =>{
