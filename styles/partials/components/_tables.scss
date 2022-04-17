@@ -3,10 +3,10 @@
 @use "../fonts" as *;
 @use "./mixins"as *;
 
-.test {
-    background-color: red;
-}
 
+.active {
+    background-color: $secondary-mercury !important;
+}
 .shows {
     &__title {
         @include header-mobile;
@@ -72,6 +72,8 @@
         }
     }
 }
+
+
 
 @include tablet {
     .shows {

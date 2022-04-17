@@ -44,19 +44,17 @@ function renderTable(arr){
     tableContainer.appendChild(contentContainer);
     
     let schedules = document.querySelectorAll(".shows__content");
-    schedules[i].addEventListener("click", event => {
-        event.preventDefault();
-        console.log(schedules[i]);
+    schedules[i].addEventListener("click", (event) => {
 
 // --------------------------------------Active State--------------------------------------//
-    for (let i = 0; i < schedules.length; i++){
-        let select = document.querySelector(".test");
+        let select = document.querySelector(".active");
         if (select !== null){
-        select.classList.remove("test");
+            select.classList.remove("active");
         }
-        event.target.classList.add("test");
-    }
-    })
+        schedules[i].classList.add("active");
+});
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////
     
     // Inside Header(Date, Venue, Location, button)

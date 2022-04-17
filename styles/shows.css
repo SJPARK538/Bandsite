@@ -406,8 +406,8 @@
     padding: 0 0 2.25rem 0;
   }
 }
-.test {
-  background-color: red;
+.active {
+  background-color: #e1e1e1 !important;
 }
 
 .shows__title {
