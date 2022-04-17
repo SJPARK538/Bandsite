@@ -96,14 +96,6 @@ form.addEventListener("submit", event => {
     clearComment.reset();
 });
 
-// Error Function
-function error(){
-    if(event.target.name.value == " "|| event.target.name.comment == "" ){
-        
-    }
-
-}
-
 // Function to get comments from server
 function getComments() {
     axios
